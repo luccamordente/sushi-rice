@@ -12,8 +12,11 @@
     "build-prod": "parcel build src/index.html"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "reset-css": "^5.0.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
@@ -21,7 +24,13 @@
     "@babel/preset-react": "^7.10.4",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
     "autoprefixer": "^9.8.6",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^3.2.0",
     "prettier": "^2.1.1",
