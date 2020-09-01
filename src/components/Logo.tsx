@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import LogoIcon from "../assets/logo.png";
 
-export default function Logo() {
+export default React.memo(function Logo() {
   return (
     <Container>
       <img src={LogoIcon} />
@@ -13,7 +13,7 @@ export default function Logo() {
       </div>
     </Container>
   );
-}
+});
 
 const Container = styled.div`
   display: flex;
