@@ -26,11 +26,10 @@ const PeopleCount = ({ defaultValue, onChange }: Props) => {
       <label htmlFor="people-count-input">Sushi para quantas pessoas?</label>
       <input
         id="people-count-input"
-        type="number"
+        type="text"
         value={peopleCount}
         onChange={handleCountChanged}
-        min="1"
-        max="100"
+        pattern="[0-9]*"
       />
     </Container>
   );
@@ -62,5 +61,9 @@ const Container = styled.div`
     text-align: center;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
     width: 16rem;
+
+    &:invalid {
+      opacity: 0.6;
+    }
   }
 `;
