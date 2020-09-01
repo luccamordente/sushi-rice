@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import LogoIcon from "../assets/logo.png";
+import SushiRice from "../assets/logo.svg";
 
 export default React.memo(function Logo() {
   return (
     <Container>
-      <img src={LogoIcon} />
+      <SushiRice />
       <div>
         <span className="primary">Sushi Rice</span>{" "}
         <span className="secondary">Calculator</span>
@@ -21,8 +21,9 @@ const Container = styled.div`
   font-size: 55px;
   align-items: center;
 
-  img {
-    width: 80px;
+  svg {
+    width: 50px;
+    margin-right: 0.2em;
   }
 
   .primary {
@@ -41,8 +42,8 @@ const Container = styled.div`
     font-size: 35px;
     justify-content: center;
 
-    img {
-      width: 50px;
+    svg {
+      width: 33px;
     }
   }
 `;
