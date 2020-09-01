@@ -53,22 +53,23 @@ const Container = styled.div`
   box-sizing: border-box;
   color: #3a3a3a;
   text-transform: lowercase;
-  padding: 2rem;
+  padding: 3rem 2rem;
+  width: 30rem;
 
   h1 {
     color: #b9b9b9;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-family: "Ropa Sans", sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     small {
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
   }
 
   @media (max-width: 767.98px) {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 1rem;
 
     h1 {
       small {
@@ -80,11 +81,6 @@ const Container = styled.div`
 
 const List = styled.div`
   font-family: "Finger Paint", serif;
-  min-width: 20rem;
-
-  @media (max-width: 767.98px) {
-    min-width: initial;
-  }
 `;
 
 const Item = styled.div`
@@ -99,15 +95,15 @@ const Item = styled.div`
 `;
 const Name = styled.div`
   flex: 1 1 auto;
-  font-size: 1.3rem;
+  font-size: 1.9rem;
 `;
 const Amount = styled.div`
   flex: 1 1 auto;
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   text-align: right;
 `;
 const Unit = styled.div`
   flex: 0 1 auto;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   padding-left: 0.4rem;
 `;

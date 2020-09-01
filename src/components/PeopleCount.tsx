@@ -45,7 +45,7 @@ const Container = styled.div`
   label {
     color: rgba(0, 0, 0, 0.6);
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     margin-bottom: 1em;
     text-transform: lowercase;
   }
@@ -58,9 +58,9 @@ const Container = styled.div`
     color: #fff;
     display: block;
     font-family: "Play";
-    font-size: 6em;
+    font-size: 10em;
     text-align: center;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-    width: 11rem;
+    width: 16rem;
   }
 `;

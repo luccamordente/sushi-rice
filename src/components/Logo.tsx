@@ -18,11 +18,11 @@ export default function Logo() {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  font-size: 45px;
+  font-size: 55px;
   align-items: center;
 
   img {
-    width: 50px;
+    width: 80px;
   }
 
   .primary {
@@ -38,10 +38,11 @@ const Container = styled.div`
   }
 
   @media (max-width: 767.98px) {
-    font-size: 30px;
+    font-size: 35px;
+    justify-content: center;
 
     img {
-      width: 40px;
+      width: 50px;
     }
   }
 `;

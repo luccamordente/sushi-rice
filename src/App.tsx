@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import "reset-css";
-import "./App.css";
 import Logo from "./components/Logo";
 import PeopleCount from "./components/PeopleCount";
 import IngredientsList from "./components/IngredientsList";
+
+import "reset-css";
+import "./App.css";
 
 const DEFAULT_PEOPLE_COUNT = 3;
 
