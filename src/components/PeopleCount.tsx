@@ -16,6 +16,7 @@ const PeopleCount = ({ defaultValue, onChange }: Props) => {
 
       const count = parseInt(value);
       if (isNaN(count)) return;
+      if (count <= 0) return;
       onChange(count);
     },
     [onChange]
