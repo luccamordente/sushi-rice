@@ -14,7 +14,7 @@ const PeopleCount = ({ defaultValue, onChange }: Props) => {
       const { value } = event.target;
       setPeopleCount(value);
 
-      const count = parseInt(value);
+      const count = parseFloat(value);
       if (isNaN(count)) return;
       if (count <= 0) return;
       onChange(count);
@@ -30,7 +30,7 @@ const PeopleCount = ({ defaultValue, onChange }: Props) => {
         type="text"
         value={peopleCount}
         onChange={handleCountChanged}
-        pattern="[0-9]*"
+        pattern="[0-9]*\.?[0-9]*"
       />
     </Container>
   );
