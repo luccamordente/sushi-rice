@@ -1,32 +1,15 @@
-# sushi-rice
+# Sushi Rice App
 
-Empty project.
-
-## Building and running on localhost
-
-First install dependencies:
+## Start
 
 ```sh
-npm install
+yarn start
 ```
 
-To run in hot module reloading mode:
+## Deploy
+
+To deploy, push to `master` branch.
 
 ```sh
-npm start
+git push origin master
 ```
-
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-## Running
-
-Open the file `dist/index.html` in your browser
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
-
