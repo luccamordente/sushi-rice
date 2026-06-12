@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import Header from "./Header";
-import PeopleCount from "./PeopleCount";
+import AmountInput from "./AmountInput";
 import IngredientsList from "./IngredientsList";
 
 const DEFAULT_PEOPLE_COUNT = 3;
@@ -28,7 +28,7 @@ export default function Calculator() {
             flexGrow: 1,
           }}
         >
-          <PeopleCount
+          <AmountInput
             defaultValue={DEFAULT_PEOPLE_COUNT}
             onChange={setPeopleCount}
           />
