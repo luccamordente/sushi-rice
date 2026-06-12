@@ -20,7 +20,7 @@ export default function IngredientsList({ peopleCount }: Props) {
         </Item>
         <Item>
           <Name>Água</Name>
-          <Amount>{Math.round(peopleCount * 240 * 0.66 * (240 / 240))}</Amount>
+          <Amount>{Math.round(peopleCount * 240 * 0.61 * (240 / 240))}</Amount>
           <Unit>g</Unit>
         </Item>
         <Item>
