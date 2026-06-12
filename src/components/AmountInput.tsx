@@ -129,6 +129,7 @@ const Container = styled.div`
   }
 
   input {
+    box-sizing: border-box;
     padding: 1rem 1rem;
     background-color: #000;
     border-radius: 25px;
@@ -136,10 +137,13 @@ const Container = styled.div`
     color: #fff;
     display: block;
     font-family: "Play";
-    font-size: 10em;
+    /* Escala com a largura da viewport, limitada ao tamanho original. */
+    font-size: clamp(3.5rem, 22vw, 10em);
     text-align: center;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-    width: 28.8rem;
+    /* Ocupa a largura disponível sem ultrapassar a tela em telas estreitas. */
+    width: 100%;
+    max-width: 28.8rem;
 
     &:invalid {
       opacity: 0.6;
