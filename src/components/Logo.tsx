@@ -8,8 +8,7 @@ export default React.memo(function Logo() {
     <Container>
       <SushiRice />
       <div>
-        <span className="primary">Sushi Rice</span>{" "}
-        <span className="secondary">Calculator</span>
+        <span className="primary">Sushi Rice</span>
       </div>
     </Container>
   );
@@ -30,12 +29,6 @@ const Container = styled.div`
     color: #fff;
     font-family: "Ceviche One";
     font-size: 1em;
-  }
-
-  .secondary {
-    color: #bd0b07;
-    font-family: "Russo One";
-    font-size: 0.5em;
   }
 
   @media (max-width: 767.98px) {
