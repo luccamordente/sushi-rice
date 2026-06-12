@@ -1,70 +1,30 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
 
-import Logo from "./components/Logo";
-import PeopleCount from "./components/PeopleCount";
-import IngredientsList from "./components/IngredientsList";
+import Calculator from "./components/Calculator";
+import PreparationMethod from "./components/PreparationMethod";
+import { Route } from "./components/Nav";
 
 import "reset-css";
 import "./App.css";
 
-const DEFAULT_PEOPLE_COUNT = 3;
-
-export default function App() {
-  const [peopleCount, setPeopleCount] = useState(DEFAULT_PEOPLE_COUNT);
-
-  return (
-    <Layout>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Logo />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            flexGrow: 1,
-          }}
-        >
-          <PeopleCount
-            defaultValue={DEFAULT_PEOPLE_COUNT}
-            onChange={setPeopleCount}
-          />
-        </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <IngredientsList peopleCount={peopleCount} />
-      </div>
-    </Layout>
-  );
+function routeFromHash(hash: string): Route {
+  return hash === "#/preparo" ? "preparo" : "home";
 }
 
-const Layout = styled.div`
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  padding: 1rem;
-  min-height: 100vh;
+function useHashRoute(): Route {
+  const [route, setRoute] = useState<Route>(routeFromHash(window.location.hash));
 
-  & > * {
-    flex: 50%;
-  }
+  useEffect(() => {
+    const handleHashChange = () => setRoute(routeFromHash(window.location.hash));
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
-  @media (max-width: 767.98px) {
-    display: block;
-    padding: 0.5rem;
-  }
-`;
+  return route;
+}
+
+export default function App() {
+  const route = useHashRoute();
+
+  return route === "preparo" ? <PreparationMethod /> : <Calculator />;
+}
