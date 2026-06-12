@@ -5,11 +5,16 @@ interface Props {
   readonly peopleCount: number;
 }
 
+// Exibe a contagem de pessoas com no máximo 1 casa decimal, no formato pt-BR,
+// para não vazar decimais longos quando vem do modo "arroz" (ex: 3.333 -> "3,3").
+const formatPeople = (n: number): string =>
+  `${Math.round(n * 10) / 10}`.replace(".", ",");
+
 export default function IngredientsList({ peopleCount }: Props) {
   return (
     <Container>
       <h1>
-        Ingredientes <small>Para {peopleCount} pessoas</small>
+        Ingredientes <small>Para {formatPeople(peopleCount)} pessoas</small>
       </h1>
 
       <List>

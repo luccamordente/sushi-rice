@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import Logo from "./components/Logo";
-import PeopleCount from "./components/PeopleCount";
+import AmountInput from "./components/AmountInput";
 import IngredientsList from "./components/IngredientsList";
 
 import "reset-css";
@@ -31,7 +31,7 @@ export default function App() {
             flexGrow: 1,
           }}
         >
-          <PeopleCount
+          <AmountInput
             defaultValue={DEFAULT_PEOPLE_COUNT}
             onChange={setPeopleCount}
           />
